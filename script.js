@@ -7,6 +7,27 @@ const result = $("#result");
 const excludeRecent = $("#excludeRecent");
 const recentBox = $("#recentBox");
 const recentInput = $("#recentInput");
+const themeToggle = $("#themeToggle");
+
+/**
+ * ✅ 테마 저장/불러오기 (localStorage)
+ */
+const THEME_KEY = "vibeLotto_theme_v1";
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.textContent = theme === "dark" ? "화이트모드" : "다크모드";
+}
+
+(() => {
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === "dark" || saved === "light") {
+    applyTheme(saved);
+    return;
+  }
+  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(prefersDark ? "dark" : "light");
+})();
 
 /**
  * ✅ 최근번호 저장/불러오기 (localStorage)
@@ -92,6 +113,12 @@ function formatSets(sets) {
  */
 excludeRecent.addEventListener("change", () => {
   recentBox.classList.toggle("hidden", !excludeRecent.checked);
+});
+
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(next);
+  localStorage.setItem(THEME_KEY, next);
 });
 
 btn.addEventListener("click", () => {
