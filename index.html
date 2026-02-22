@@ -25,6 +25,7 @@
         <a href="#generator">번호 생성기</a>
         <a href="#about">서비스 소개</a>
         <a href="#guide">이용 가이드</a>
+        <a href="#faq">FAQ</a>
         <a href="#policy">정책</a>
         <a href="#contact">제휴 문의</a>
         <a href="#comments">댓글</a>
@@ -99,6 +100,32 @@
         </div>
       </section>
 
+      <section id="faq" class="card">
+        <h2 class="cardTitle">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>이 번호는 당첨 확률을 높여주나요?</summary>
+            <p>
+              아니요. 번호는 무작위로 생성되며, 당첨 확률을 높이거나 예측하지 않습니다.
+            </p>
+          </details>
+          <details>
+            <summary>최근 번호 제외는 어떻게 동작하나요?</summary>
+            <p>
+              입력한 최근 회차 번호를 제외하고 1~45 사이에서 중복 없이 뽑습니다.
+              제외 범위가 과도하면 경고 메시지를 표시합니다.
+            </p>
+          </details>
+          <details>
+            <summary>결과는 저장되나요?</summary>
+            <p>
+              결과는 브라우저에 저장하지 않습니다. 다만 최근 회차 입력값은 편의를 위해
+              브라우저에 저장됩니다.
+            </p>
+          </details>
+        </div>
+      </section>
+
       <section id="policy" class="card">
         <h2 class="cardTitle">정책</h2>
         <div class="grid">
@@ -107,6 +134,9 @@
             <p>
               제휴 문의 폼에는 이름과 이메일, 메시지 내용만 수집됩니다. 이 정보는
               문의 응대를 위해서만 사용하며, 별도 마케팅 목적에는 사용하지 않습니다.
+            </p>
+            <p class="small">
+              상세 내용은 <a class="link" href="privacy.html">개인정보 처리방침</a>에서 확인하세요.
             </p>
           </div>
           <div class="panel">
@@ -124,6 +154,27 @@
             </p>
           </div>
         </div>
+      </section>
+
+      <section id="operator" class="card">
+        <h2 class="cardTitle">운영자 정보</h2>
+        <div class="grid">
+          <div class="panel">
+            <h3>운영 주체</h3>
+            <p>Vibe Lotto 운영팀</p>
+          </div>
+          <div class="panel">
+            <h3>연락처</h3>
+            <p>contact@vibelotto.example</p>
+          </div>
+          <div class="panel">
+            <h3>운영 시간</h3>
+            <p>월–금 10:00–18:00 (KST)</p>
+          </div>
+        </div>
+        <p class="hint small">
+          문의는 제휴 문의 폼으로 보내주세요.
+        </p>
       </section>
 
       <section id="contact" class="card">
@@ -171,6 +222,11 @@
 
       <footer class="footer">
         <span>Tip: 번호는 완전 랜덤(중복 없이)으로 뽑아요.</span>
+        <span class="footerLinks">
+          <a class="link" href="privacy.html">개인정보 처리방침</a>
+          <span class="dot">·</span>
+          <a class="link" href="#operator">운영자 정보</a>
+        </span>
       </footer>
     </main>
 
