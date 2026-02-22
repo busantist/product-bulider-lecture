@@ -55,6 +55,7 @@ body {
 }
 h1 { margin: 0 0 8px; font-size: 40px; letter-spacing: -0.5px; }
 .sub { margin: 0 0 18px; color: var(--muted); }
+.cardTitle { margin: 0 0 6px; font-size: 20px; }
 
 .card {
   background: var(--card-bg);
@@ -108,6 +109,15 @@ textarea {
   padding: 10px;
   resize: vertical;
 }
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--input-bg);
+  color: var(--text);
+  padding: 10px;
+}
 
 .hint { margin: 0 0 10px; color: var(--muted); line-height: 1.4; }
 .hint.small { margin-top: 8px; font-size: 12px; }
@@ -128,3 +138,7 @@ textarea {
 code { color: var(--code); }
 
 [data-theme="light"] .result.empty { color: rgba(15, 23, 42, 0.5); }
+
+.form { display: grid; gap: 12px; }
+.field { display: grid; gap: 6px; color: var(--muted); font-size: 13px; }
+.field span { color: var(--muted); }
