@@ -21,8 +21,16 @@
         </div>
         <button id="themeToggle" class="btn ghost sm" type="button">화이트모드</button>
       </div>
+      <nav class="nav">
+        <a href="#generator">번호 생성기</a>
+        <a href="#about">서비스 소개</a>
+        <a href="#guide">이용 가이드</a>
+        <a href="#policy">정책</a>
+        <a href="#contact">제휴 문의</a>
+        <a href="#comments">댓글</a>
+      </nav>
 
-      <section class="card">
+      <section id="generator" class="card">
         <div class="row">
           <button id="btn" class="btn">번호 5세트 생성</button>
           <button id="copy" class="btn ghost" disabled>결과 복사</button>
@@ -50,7 +58,75 @@
         <div id="result" class="result empty">여기에 결과가 나와요.</div>
       </section>
 
-      <section class="card">
+      <section id="about" class="card">
+        <h2 class="cardTitle">서비스 소개</h2>
+        <p class="sub">
+          Vibe Lotto는 번호를 빠르게 생성하고, 번호 선택 과정을 투명하게 보여주는
+          간단한 도구예요. 엔터테인먼트 목적이며, 당첨을 보장하거나 예측하지 않습니다.
+        </p>
+        <div class="grid">
+          <div class="panel">
+            <h3>무엇을 제공하나요</h3>
+            <p>
+              1회 클릭으로 5세트의 번호를 만들고, 최근 회차 번호를 제외해 생성할 수 있어요.
+              생성된 결과는 복사 버튼으로 바로 공유할 수 있습니다.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>투명한 생성 로직</h3>
+            <p>
+              1~45 사이에서 중복 없이 뽑고, 선택된 숫자는 오름차순으로 정렬됩니다.
+              제외 조건이 과도하면 경고 메시지를 보여줍니다.
+            </p>
+          </div>
+        </div>
+        <p class="hint">마지막 업데이트: 2026년 2월 22일</p>
+      </section>
+
+      <section id="guide" class="card">
+        <h2 class="cardTitle">이용 가이드</h2>
+        <ul class="list">
+          <li>버튼을 누르면 5세트가 생성됩니다.</li>
+          <li>최근 회차 번호를 제외하려면 체크 후 번호를 입력하세요.</li>
+          <li>입력 예시는 `3,7,15,16,19,43 | 1,9,12,22,33,40` 입니다.</li>
+          <li>결과 복사를 눌러 텍스트를 저장할 수 있습니다.</li>
+        </ul>
+        <div class="panel">
+          <h3>책임 있는 이용 안내</h3>
+          <p>
+            본 서비스는 재미를 위한 도구입니다. 금전적 의사결정은 신중히 판단해 주세요.
+          </p>
+        </div>
+      </section>
+
+      <section id="policy" class="card">
+        <h2 class="cardTitle">정책</h2>
+        <div class="grid">
+          <div class="panel">
+            <h3>개인정보 처리</h3>
+            <p>
+              제휴 문의 폼에는 이름과 이메일, 메시지 내용만 수집됩니다. 이 정보는
+              문의 응대를 위해서만 사용하며, 별도 마케팅 목적에는 사용하지 않습니다.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>쿠키 및 외부 서비스</h3>
+            <p>
+              댓글 기능(Disqus)과 광고 서비스(AdSense)가 쿠키를 사용할 수 있습니다.
+              브라우저 설정에서 쿠키 사용을 제한할 수 있습니다.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>콘텐츠 및 면책</h3>
+            <p>
+              번호 생성 결과는 무작위이며, 당첨을 보장하지 않습니다. 서비스 이용으로 인한
+              결과에 대해 책임지지 않습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
         <h2 class="cardTitle">제휴 문의</h2>
         <p class="sub">간단히 남겨주시면 확인 후 연락드릴게요.</p>
         <form class="form" action="https://formspree.io/f/xkovqqrv" method="POST">
@@ -70,7 +146,7 @@
         </form>
       </section>
 
-      <section class="card">
+      <section id="comments" class="card">
         <h2 class="cardTitle">댓글</h2>
         <div id="disqus_thread"></div>
         <script>

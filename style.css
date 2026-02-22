@@ -57,6 +57,23 @@ h1 { margin: 0 0 8px; font-size: 40px; letter-spacing: -0.5px; }
 .sub { margin: 0 0 18px; color: var(--muted); }
 .cardTitle { margin: 0 0 6px; font-size: 20px; }
 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 18px;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: rgba(255,255,255,0.02);
+}
+.nav a:hover { border-color: var(--btn); color: var(--btn); }
+
 .card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -142,3 +159,26 @@ code { color: var(--code); }
 .form { display: grid; gap: 12px; }
 .field { display: grid; gap: 6px; color: var(--muted); font-size: 13px; }
 .field span { color: var(--muted); }
+
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 10px 0 0;
+}
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(0,0,0,0.15);
+}
+[data-theme="light"] .panel { background: rgba(15, 23, 42, 0.03); }
+.panel h3 { margin: 0 0 6px; font-size: 15px; }
+.panel p { margin: 0; color: var(--muted); }
+
+.list {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.list li { margin: 6px 0; }
