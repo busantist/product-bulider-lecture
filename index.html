@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibe Lotto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>🎲 Vibe Lotto</h1>
+      <p class="sub">버튼 한 번으로 로또 번호 5세트를 만들어줘요.</p>
+
+      <section class="card">
+        <div class="row">
+          <button id="btn" class="btn">번호 5세트 생성</button>
+          <button id="copy" class="btn ghost" disabled>결과 복사</button>
+        </div>
+
+        <div class="options">
+          <label class="chk">
+            <input id="excludeRecent" type="checkbox" />
+            최근 2회차 당첨번호 제외(입력했을 때만 적용)
+          </label>
+        </div>
+
+        <div id="recentBox" class="recentBox hidden">
+          <p class="hint">
+            최근 2회차 당첨번호(보너스 제외)를 <b>쉼표</b>로 입력해줘요. 예: <code>3,7,15,16,19,43</code>
+          </p>
+          <textarea
+            id="recentInput"
+            rows="2"
+            placeholder="예: 3,7,15,16,19,43 | 1,9,12,22,33,40"
+          ></textarea>
+          <p class="hint small">두 회차는 <b>|</b> 로 구분해도 되고, 줄바꿈으로 구분해도 돼요.</p>
+        </div>
+
+        <div id="result" class="result empty">여기에 결과가 나와요.</div>
+      </section>
+
+      <footer class="footer">
+        <span>Tip: 번호는 완전 랜덤(중복 없이)으로 뽑아요.</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
